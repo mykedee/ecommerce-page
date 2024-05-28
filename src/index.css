@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.open {
+  @apply h-[100vh] w-[100vw] bg-black absolute left-0 right-0 top-[71px] transition duration-500 ease-out border-t border-t-[#f5deb321] z-50;
+}
+
+.hamburger {
+  transform: rotate(45deg);
+  transition: 0.5s ease-out;
+}
+
+.hamburger span:last-child {
+  transform: rotate(-90deg);
+  bottom: -4px;
+  position: absolute;
+  transition: 0.5s ease-out;
+}
+
+header span {
+  @apply block;
+}
+
+.hamburger span:nth-child(2) {
+  @apply hidden;
+}
+.hamburger span:first-child {
+  width: 1.3rem;
+}
+
+nav.open ul {
+  display: block;
+  right: 9%;
+  position: absolute;
+}
+
+nav.open li:last-child {
+  display: block;
+  text-align: center;
+  right: 0;
+  left: 0;
+  position: fixed;
+  bottom: 13px;
+}
+
+.linx {
+  z-index: 1;
+}
+
+.linka a {
+  position: relative;
+  top: -14px;
+  right: -47px;
+  z-index: 2;
+}
+
+nav.open ul a {
+  @apply block mt-[30px] text-right;
+}
+
+nav.open ul a:last-child {
+  @apply bottom-[137px] absolute right-0 left-0;
+}
+
+.close {
+  @apply transition duration-500 ease-out;
+}
+
+@media (min-width: 768px) {
+  .open {
+  }
+
+  nav.open ul {
+  }
+
+  .close {
+    @apply transition duration-500 ease-out;
+  }
+}
+
+span {
+  @apply h-1 w-6 bg-[#222222] block mt-1;
+}
+.mySwiper img {
+  @apply h-[600px] lg:h-[850px] w-full;
+}
